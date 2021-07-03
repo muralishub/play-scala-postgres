@@ -29,7 +29,7 @@ class ProductController @Inject()(productRepository: ProductRepository, cc: Mess
       },
       item => {
         productRepository.add(item.name).map { _ =>
-          Redirect(routes.ProductController.index).flashing("success" -> "item.created")
+          Redirect(routes.ProductController.index).flashing("success" -> "Done!")
         }
       }
     )
